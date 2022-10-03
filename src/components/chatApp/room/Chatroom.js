@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 
 const Chatroom = () => {
-    
   return (
     <Fragment>
-      <div className="row">
+      <div className="row text-white">
         <div className="col-3">hi</div>
         <div className="col-9">
           <div className="row">hi2</div>
