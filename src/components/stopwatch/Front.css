@@ -1,0 +1,44 @@
+.color-white{
+    color:white;
+}
+
+.btn1{
+    width: 100px;;
+    color:black;
+    background-color:white;
+    border-radius: 0px;
+    transition:200ms;
+}
+
+.table{
+    background-color:white;
+}
+.btn1:hover{
+    background-color:rgb(44, 68, 78);
+    color:white;
+    transform: scale(1.05);
+
+}
+.btn1:active{
+    transform: scale(0.90);
+
+}
+
+.flex{
+    display:flex;
+    flex-flow: column;
+    justify-content:space-evenly;
+    align-items:center;
+    height: 200px;
+    
+
+}
+
+.card{
+    width:200px;
+    height:250px;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

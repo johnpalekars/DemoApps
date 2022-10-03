@@ -1,0 +1,12 @@
+.customCard{
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:white;
+    background-color:rebeccapurple;
+    margin: 15px 15px;
+    padding: 10px;
+
+}
