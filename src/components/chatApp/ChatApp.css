@@ -1,29 +1,19 @@
-
-.form-container{
-    max-width: 350px;
-    margin: 20px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
-.input{
-    margin: 20px 5px;
+.input {
+  margin: 20px 5px;
 }
 
-
-
-
-
-.home{
-    height: 400px;
-    color:aliceblue;
-    font-size:x-large;
-    
+.home {
+  height: 400px;
+  color: aliceblue;
+  font-size: x-large;
 }
-button{
-    color:gray
+button {
+  color: gray;
 }
-
-
