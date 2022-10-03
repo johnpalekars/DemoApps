@@ -12,7 +12,7 @@ const ChatApp = () => {
 
   useEffect(() => {
     const socketIO = io.connect(
-      "https://demoappsbackend--4000.local.webcontainer.io"
+      "http://localhost:4000"
     );
 
     dispatch(setSocket(socketIO));
