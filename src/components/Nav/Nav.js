@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
@@ -10,20 +10,23 @@ const Nav = () => {
       className="navbar navbar-expand-lg navbar-dark bg-dark"
       style={{ padding: "0px 25px " }}
     >
-
-      <div style={{cursor:"pointer"}} className="navbar-brand" onClick={()=>navigate("/")}>
+      <div
+        style={{ cursor: "pointer" }}
+        className="navbar-brand"
+        onClick={() => navigate("/")}
+      >
         Learn
       </div>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav">
-        <li className="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to="/">
               Home
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/list">
-              List
+              HTTP
             </NavLink>
           </li>
           <li className="nav-item">
