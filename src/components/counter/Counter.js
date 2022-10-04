@@ -24,7 +24,15 @@ const Counter = () => {
       <br />
       <div className="container">
         <div className="row">
-          <div className="col-4 text-center">
+        <div className="col-3 text-center">
+            <button
+              className="btn btn-lg btn-danger"
+              onClick={() => dispatch(counterINC.actions.decrementByTen())}
+            >
+              -10
+            </button>
+          </div>
+          <div className="col-3 text-center">
             <button
               className="btn btn-lg btn-danger"
               onClick={() => dispatch(decrement())}
@@ -32,7 +40,7 @@ const Counter = () => {
               -
             </button>
           </div>
-          <div className="col-4 text-center">
+          <div className="col-3 text-center">
             <button
               className="btn btn-lg btn-primary"
               onClick={() => dispatch(increment())}
@@ -40,7 +48,7 @@ const Counter = () => {
               +
             </button>
           </div>
-          <div className="col-4 text-center">
+          <div className="col-3 text-center">
             <button
               className="btn btn-lg btn-primary"
               onClick={() => dispatch(counterINC.actions.incrementByTen())}

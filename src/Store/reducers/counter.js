@@ -12,7 +12,10 @@ const counterSlice = createSlice({
     },
     incrementByTen:(state)=>{
         return {value: state.value +10};
-    }
+    },
+    decrementByTen:(state)=>{
+      return {value: state.value -10};
+  }
   },
 });
 
