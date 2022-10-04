@@ -10,15 +10,15 @@ const Counter = () => {
 
   return (
     <Fragment>
-      <div class="row h1">
+      <div className="row h1">
         {" "}
         <div style={{ color: "white", fontSize: "100px" }} class="text-center">
           {counter}
         </div>
       </div>
       <br />
-      {[1, 1, 1].map(() => (
-        <hr style={{ color: "white" }} />
+      {[1, 1, 1].map((e,i) => (
+        <hr key={i} style={{ color: "white" }} />
       ))}
       <br />
       <br />

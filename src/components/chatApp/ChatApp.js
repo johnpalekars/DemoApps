@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
+import Loader from "../loader/Loader";
 import "./ChatApp.css";
 import io from "socket.io-client";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,17 +11,13 @@ const ChatApp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const socketIO = io.connect(
-      "http://localhost:4000"
-    );
-
-    dispatch(setSocket(socketIO));
-  }, [dispatch]);
-
   const joinRoom = () => {
     if (user !== "" && room !== "") {
-      socket.emit("join_room", { user, room });
+      setTimeout(async () => {
+        const socketIO = await io.connect("http://localhost:4000");
+        dispatch(setSocket(socketIO));
+        socketIO.emit("join_room", { user, room });
+      }, 1200);
       navigate("chatroom");
     } else {
       alert("Please enter required field!");
