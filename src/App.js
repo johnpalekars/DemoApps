@@ -16,13 +16,12 @@ import Counter from "./components/counter/Counter";
 function App() {
   return (
     <div className="App">
-
-      <div className="container-fluid">
+      <div className="container-fluid" style={{height:"82%"}}>
         <div className="row">
           <Nav />
         </div>
 
-        <div className=" pad">
+        <div className="pad">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/list" element={<List />} />
