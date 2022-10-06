@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { setRoom, setUser, setSocket } from "../../../Store/reducers/chatRoom";
 import Loader from "../../loader/Loader";
 import "./Chatroom.css";
+import Message from "./messages/Message";
 import Send from "./send/Send";
 import Sidebar from "./sidebar/Sidebar";
 
@@ -39,11 +40,13 @@ const Chatroom = () => {
           </div>
           <div className="col-8 messages">
             <div className="row " style={{height:"87%"}}>
-              <div className="h-100" >hi</div>
+              <div className="h-100" >
+                <Message socket={socket} user={user}/>
+              </div>
             </div>
-            <div className="row" style={{height:"13%"}}>
-              <div className="" >
-                <Send/>
+            <div className="row " style={{height:"13%", backgroundColor:"rgb(63, 73, 94)"}}>
+              <div className="h-100" >
+                <Send socket={socket} user={user} room={room}/>
               </div>
             </div>
           </div>

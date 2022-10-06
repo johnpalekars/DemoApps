@@ -1,5 +1,8 @@
 .middle{
-    position: absolute;
-    left: 46%;
-    top: 40%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

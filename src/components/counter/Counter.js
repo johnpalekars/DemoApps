@@ -12,7 +12,7 @@ const Counter = () => {
     <Fragment>
       <div className="row h1">
         {" "}
-        <div style={{ color: "white", fontSize: "100px" }} class="text-center">
+        <div style={{ color: "white", fontSize: "100px" }} className="text-center">
           {counter}
         </div>
       </div>

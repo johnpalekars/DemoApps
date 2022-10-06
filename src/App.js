@@ -16,7 +16,7 @@ import Counter from "./components/counter/Counter";
 function App() {
   return (
     <div className="App">
-      <div className="container-fluid" style={{height:"82%"}}>
+      <div className="container-fluid" style={{height:"100%"}}>
         <div className="row">
           <Nav />
         </div>

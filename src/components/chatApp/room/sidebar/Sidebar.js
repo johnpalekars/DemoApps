@@ -1,18 +1,38 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setRoom, setUser, setSocket } from "../../../../Store/reducers/chatRoom";
 
 const Sidebar = () => {
   const { user, room, socket } = useSelector((state) => state.chat);
+  const [roomUsers, setRoomUsers] = useState([]);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  let __createdtime__ = Date.now();
+
+
+  useEffect(() => {
+    socket.on("chatroom_users",(data)=>{
+      setRoomUsers(data);
+    });
+  
+    return () => {
+      socket.off("chatroom_users");
+      leaveRoom();
+    }
+  }, [socket])
+  
+
+
+
 
   const leaveRoom = () => {
+    socket.emit("left_room",{user,room,__createdtime__});
     dispatch(setSocket(""));
     dispatch(setUser(""));
     dispatch(setRoom(""));
+    socket.off();
     navigate("/chatApp");
   };
   return (
@@ -43,7 +63,7 @@ const Sidebar = () => {
             Members
         </div>
         <ul className="list-group">
-            <li className="list-group-item">abhi</li>
+            {roomUsers.map((ele,i)=><li key={i} className="list-group-item">{ele.user}</li>)}
         </ul>
       </div>
     </Fragment>
