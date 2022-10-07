@@ -14,7 +14,7 @@ const ChatApp = () => {
   const joinRoom = () => {
     if (user !== "" && room !== "") {
       setTimeout(async () => {
-        const socketIO = await io.connect("http://localhost:4000");
+        const socketIO = await io.connect("https://chat-station.herokuapp.com/");
         dispatch(setSocket(socketIO));
         socketIO.emit("join_room", { user, room });
       }, 1200);
